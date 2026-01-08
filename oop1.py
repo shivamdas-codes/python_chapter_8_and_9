@@ -17,3 +17,24 @@ class car():
 c1 = car()
 print(c1.color)
 print(c1.brand)
+
+
+# example 3: (IMPORTANT)
+class student:
+    # it is a default constructor
+    # if we dont write any constructor then python provides a default constructor
+    def __init__(self):
+        pass
+    # it is a parameterized constructor
+    def __init__(self,name,marks):  # constructor with parameters
+        self.name = name
+        self.marks = marks
+        print("adding new data to datebase")
+
+s1 = student("shivam",95)
+print(s1.name,s1.marks)
+
+s2 = student("shreya",98)
+print(s2.name,s2.marks)
+
+
