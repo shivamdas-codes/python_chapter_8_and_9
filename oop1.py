@@ -101,3 +101,5 @@ class student:
 s1 = student("shivam", [98,99,76] )
 s1.find_avg()
 
+s1 = student("shreya", [88,79,96] )
+s1.find_avg()   #here we can change our attr directly if i is needed from outside the class.
