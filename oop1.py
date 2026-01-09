@@ -43,3 +43,27 @@ print(student.college_name)
 s2 = student("shreya",98)
 print(s2.name,s2.marks)
 print(student.college_name)
+
+
+
+# example 4:
+class student:
+    college_name = "avanthi institute"
+
+    def __init__(self,name,marks):
+        self.name = name
+        self.marks = marks
+
+    def welcome(self):
+        print("welcome student", self.name, "to", student.college_name)
+
+    def get_marks(self):
+        return self.marks
+    
+s1 = student("shivam",95)
+s1.welcome()
+print(s1.get_marks())
+
+s2 = student("shreya",98)
+s2.welcome()
+print(s2.get_marks())
