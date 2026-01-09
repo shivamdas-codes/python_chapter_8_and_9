@@ -96,7 +96,6 @@ class student:
     def college():
         print("avanthi institute")
 
-
     def find_avg(self):
         sum = 0
         for mark in self.marks:
@@ -108,3 +107,23 @@ s1.find_avg()
 
 s1 = student("shreya", [88,79,96] )
 s1.find_avg()   #here we can change our attr directly if i is needed from outside the class.
+
+
+
+
+# abstraction example:
+class car:
+    def __init__(self):
+        self.acc = False
+        self.brk = False
+        self.clutch = False
+
+    def start(self):
+        self.acc = True #here the abstraction is implemented as we are hiding the internal details of how a car starts
+        self.brk =  True    #here the abstraction is implemented as we are hiding the internal details of how a car starts
+        self.clutch =  True #here the abstraction is implemented as we are hiding the internal details of how a car starts
+        print("car started")
+
+c1 = car()
+c1.start()
+
