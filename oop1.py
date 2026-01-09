@@ -85,12 +85,17 @@ s1 = student("shivam", [95, 90, 85])
 print(s1.find_average())
 
 
-# or
+# # or
 class student:
     
     def __init__(self,name,marks):
         self.name = name
         self.marks = marks
+
+    @staticmethod   #this is a static method as it does not use any obj or class attr
+    def college():
+        print("avanthi institute")
+
 
     def find_avg(self):
         sum = 0
