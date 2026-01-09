@@ -67,3 +67,37 @@ print(s1.get_marks())
 s2 = student("shreya",98)
 s2.welcome()
 print(s2.get_marks())
+
+
+# ---------------------------------------------------------------------------------------------------------------------------------------
+
+# PRACTICE PROBLEMS:
+# create student class that takes name and marks of 3 subjects as arguments in constructor. then create the method to print the average.
+class student:
+     def __init__(self,name,marks):
+        self.name = name
+        self.marks = marks
+
+     def find_average(self):
+        return sum(self.marks) / 3
+     
+s1 = student("shivam", [95, 90, 85])
+print(s1.find_average())
+
+
+# or
+class student:
+    
+    def __init__(self,name,marks):
+        self.name = name
+        self.marks = marks
+
+    def find_avg(self):
+        sum = 0
+        for mark in self.marks:
+            sum += mark
+        print("hey", self.name, "your average marks is:", sum / 3)
+
+s1 = student("shivam", [98,99,76] )
+s1.find_avg()
+
