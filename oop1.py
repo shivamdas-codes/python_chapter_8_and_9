@@ -127,6 +127,7 @@ s1.find_avg()   #here we can change our attr directly if i is needed from outsid
 
 
 
+#   CREATING AN ACCOUNT CLASS: (IMPORTANT) 
 # create account class with 2 attributes -> balance and account number, now create method for debit and credit and printing the balance.
 class account:
     def __init__(self, account_number, balance=0):
@@ -151,3 +152,4 @@ acc1 = account("123456789")
 acc1.credit(500)
 acc1.debit(200)
 print("Current balance:", acc1.get_balance())
+
