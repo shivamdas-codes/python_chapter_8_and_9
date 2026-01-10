@@ -69,6 +69,23 @@ s2.welcome()
 print(s2.get_marks())
 
 
+
+# abstraction example:
+class car:
+    def __init__(self):
+        self.acc = False
+        self.brk = False
+        self.clutch = False
+
+    def start(self):
+        self.acc = True #here the abstraction is implemented as we are hiding the internal details of how a car starts
+        self.brk =  True    #here the abstraction is implemented as we are hiding the internal details of how a car starts
+        self.clutch =  True #here the abstraction is implemented as we are hiding the internal details of how a car starts
+        print("car started")
+
+c1 = car()
+c1.start()
+
 # ---------------------------------------------------------------------------------------------------------------------------------------
 
 # PRACTICE PROBLEMS:
@@ -110,20 +127,27 @@ s1.find_avg()   #here we can change our attr directly if i is needed from outsid
 
 
 
+# create account class with 2 attributes -> balance and account number, now create method for debit and credit and printing the balance.
+class account:
+    def __init__(self, account_number, balance=0):
+        self.account_number = account_number
+        self.balance = balance
 
-# abstraction example:
-class car:
-    def __init__(self):
-        self.acc = False
-        self.brk = False
-        self.clutch = False
+    def credit(self, amount):
+        self.balance += amount
+        print(f"Credited {amount}. New balance is {self.balance}.")
 
-    def start(self):
-        self.acc = True #here the abstraction is implemented as we are hiding the internal details of how a car starts
-        self.brk =  True    #here the abstraction is implemented as we are hiding the internal details of how a car starts
-        self.clutch =  True #here the abstraction is implemented as we are hiding the internal details of how a car starts
-        print("car started")
+    def debit(self, amount):
+        if amount > self.balance:
+            print("Insufficient balance.")
+        else:
+            self.balance -= amount
+            print(f"Debited {amount}. New balance is {self.balance}.")
 
-c1 = car()
-c1.start()
-
+    def get_balance(self):
+        return self.balance
+    
+acc1 = account("123456789")
+acc1.credit(500)
+acc1.debit(200)
+print("Current balance:", acc1.get_balance())
