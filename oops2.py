@@ -1,4 +1,4 @@
-# using delete keyword to delete an attribute of a class:
+# DELETE KEYWORD to delete an attribute of a class:
 class student:
 
     def __init__(self,name):
