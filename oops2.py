@@ -89,3 +89,16 @@ print(b1.price)
 b1.start()
 
 
+# multiple inheritance
+class A:
+    var1 = "welcome to class A"
+
+class B:
+    var2 = "welcome to class B"
+
+class C(A,B):   #multiple inheritance
+    var3 = "welcome to class C"
+c1 = C()
+print(c1.var1)  
+print(c1.var2)
+print(c1.var3)
