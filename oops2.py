@@ -40,7 +40,10 @@
 # # in this case it will print the number and password of the account which is wrong because the private method is not implemented
 
 
+
+
 # INHERITANCE example:
+# single level inheritance
 class car:  #base class
     color = "black"
     @staticmethod
@@ -50,7 +53,7 @@ class car:  #base class
     def stop():
         print("car stopped")
 
-class bmwmodel(car):    #inheritance
+class bmwmodel(car):    #single inheritance
     def __init__(self,model):
         self.model = model
 
@@ -60,4 +63,29 @@ print(b1.model)
 b1.start()
 
     
-        
+# multi-level inheritance     
+class car:  #base class
+    color = "black"
+    @staticmethod
+    def start():
+        print("car started")
+    @staticmethod
+    def stop():
+        print("car stopped")
+
+class bmwmodel(car):    #multi inheritance
+    def __init__(self,name):
+        self.model = name
+
+class bmw_factory1(bmwmodel):   #multilevel inheritance
+    def __init__(self,model,price):
+        self.model = model
+        self.price = price
+
+b1 = bmw_factory1("X5",5000000)
+print(b1.color)
+print(b1.model)
+print(b1.price)
+b1.start()
+
+
