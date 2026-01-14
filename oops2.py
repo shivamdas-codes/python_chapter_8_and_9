@@ -39,3 +39,5 @@ print(a1.reset())
 print(a1.acc_pass)
 # in this case it will print the number and password of the account which is wrong because the private method is not implemented
 
+
+# INHERITANCE example:

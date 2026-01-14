@@ -70,7 +70,7 @@ print(s2.get_marks())
 
 
 
-# abstraction example:
+# ABSTRACTION example:
 class car:
     def __init__(self):
         self.acc = False
