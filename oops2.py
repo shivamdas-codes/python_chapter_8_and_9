@@ -104,23 +104,51 @@
 # print(c1.var3)
 
 
-# using super() function:
-class car:
-    def __init__(self,type):
-        self.type = type
+# # using super() function:
+# class car:
+#     def __init__(self,type):
+#         self.type = type
 
-    @staticmethod
-    def start():
-        print("car started")
-    @staticmethod
-    def stop():
-        print("car stopped")
+#     @staticmethod
+#     def start():
+#         print("car started")
+#     @staticmethod
+#     def stop():
+#         print("car stopped")
 
-class toyota(car):
-    def __init__(self,name,type):
-        self.name = name
-        super().__init__(type)
-        super().start()
+# class toyota(car):
+#     def __init__(self,name,type):
+#         self.name = name
+#         super().__init__(type)
+#         super().start()
 
-t1 = toyota("innova","suv")
-print(t1.type)
+# t1 = toyota("innova","suv")
+# print(t1.type)
+
+
+# # CLASS METHOD example:
+# # eg1:
+# class person:
+#     name = "unknown"
+
+#     def changename(self,name):
+#         self.__class__.name = name
+
+# p1 = person()
+# p1.changename("shivam")
+# print(person.name)
+# print(p1.name)
+
+# # eg2:
+# class person:
+#     name = "unknown"
+
+#     def changename(self,name):
+#         person.name = name
+
+# p1 = person()
+# p1.changename("shivam")
+# print(person.name)
+# print(p1.name)
+
+# # eg3:
