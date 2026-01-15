@@ -152,3 +152,14 @@ print(person.name)
 print(p1.name)
 
 # eg3:
+class person:
+    name = "unknown"
+
+    @classmethod
+    def changename(cls,name):
+        cls.name = name
+
+p1 = person()
+p1.changename("shivam")
+print(person.name)
+print(p1.name)
